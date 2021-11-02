@@ -7,8 +7,8 @@ Currently 2 folders
 * Presets and API commands
 * Custom effects (Currently WLED SR only, see https://github.com/atuline/WLED/wiki/WLED-Custom-effects)
 
-Filenames should contain
+Filename conventions
 * date created as yyyymmdd
-* ♫ if it is a Soundreactive effect
-* (short notes between brackets e.g. nr of segments)
-* (Discord) Author name
+* SR if it is a Soundreactive effect
+* Author name
+* No spaces but _
