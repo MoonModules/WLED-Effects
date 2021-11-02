@@ -1,0 +1,10 @@
+program ColorWalk
+{
+   pixelCounter = 0
+
+   function renderFrame() {
+     setPixelColor(pixelCounter, pixelCounter)
+     pixelCounter = pixelCounter + 1
+   }
+  
+}

@@ -1,0 +1,25 @@
+program ColorFade
+{
+   leds = array(ledCount, ledCount)
+   pixelCounter = 0
+
+   function init() {
+      leds[3,7] = 10
+      for (i = 0; i < ledCount; i = i + 1) {
+            setPixelColor(i, pixelCounter)
+      }
+   }
+
+   function before() {
+     setPixelColor(pixelCounter, pixelCounter)
+     pixelCounter = pixelCounter + 1
+   }
+
+   function renderFrame() {
+      for (i = 0; i < ledCount; i = i + 1) {
+            setPixelColor(i, pixelCounter + i)
+      }
+     pixelCounter = pixelCounter + 1
+   }
+  
+}

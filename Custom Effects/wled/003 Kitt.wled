@@ -1,0 +1,24 @@
+program Kitt
+{
+   pixelCounter = 0
+   goingUp = 1
+
+   function renderFrame() {
+     if (pixelCounter > (ledCount-5)) {
+       goingUp = 0
+     }
+     if (pixelCounter == 0) {
+       goingUp = 1
+     }
+     setPixelColor(pixelCounter, pixelCounter)
+     if (goingUp) {
+       setPixelColor(pixelCounter - 5, 0)
+       pixelCounter = pixelCounter + 1
+     }
+     else {
+       setPixelColor(pixelCounter + 5, 0)
+       pixelCounter = pixelCounter - 1
+     }
+   }
+
+}

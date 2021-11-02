@@ -1,0 +1,9 @@
+program ColorRandom
+{
+   function renderFrame() {
+      for (i = 0; i < ledCount; i = i + 1) {
+         color = random()
+         setPixelColor(i, color)
+      }
+   }
+}
