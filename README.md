@@ -10,5 +10,6 @@ Currently 2 folders
 Filename conventions
 * date created as yyyymmdd
 * SR if it is a Soundreactive effect
+* led strip dimensions (e.g. 300 or 32x32)
 * Author name
 * No spaces but _
