@@ -1,0 +1,122 @@
+{
+  "meta": {"version": "0.1.0", "start":"program"},
+  "program": ["PROGRAM","ID","block"],
+  "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
+  "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
+  "variable" : ["VAR", "ID"],
+  "assign" : ["varleft", {"?": ["LBRACKET", "indices", "RBRACKET"]}, "ASSIGN", "expr"],
+  "indices" : ["expr", {"*": ["COMMA", "expr"]}],
+  "function" : ["FUNCTION", "ID", {"?": ["LPAREN", "formals", "RPAREN"]}, "block"],
+  "formals" : {"?":["formal",{"*":["COMMA","formal"]}]},
+  "formal" : "ID",
+  "call" : ["ID", "LPAREN", "actuals", "RPAREN"],
+  "actuals": {"?": ["expr", {"*": ["COMMA", "expr"]}]},
+  "for": ["FOR", "LPAREN", "assign", "SEMI", "expr", "SEMI", "increment", "RPAREN", "block"],
+  "increment": ["assign"],
+  "if": ["IF", "LPAREN", "expr", "RPAREN", "block", {"?":["ELSE", "elseBlock"]}],
+  "elseBlock": ["block"],
+  "expr" : [ "term", {"*": [{"|": ["PLUS", "MINUS", "EQ", "LT", "LTE", "GT", "GTE"]}, "term"]}],
+  "term" : [ "factor", {"*": [{"|": ["MUL", "DIV", "MOD", "BSHIFTL", "BSHIFTR"]}, "factor"]}],
+  "factor" : {"|": ["call", "varref", "INTEGER_CONST", "REAL_CONST", ["LPAREN", "expr", "RPAREN"]]},
+  "varref": "ID",
+  "varleft": "ID",
+
+  "TOKENS":
+  {
+    "ID": "ID",
+    "INTEGER_CONST": "INTEGER_CONST",
+    "REAL_CONST": "REAL_CONST",
+    "PLUS": "+",
+    "MINUS": "-",
+    "MUL": "*",
+    "DIV": "/",
+    "MOD": "%",
+    "BSHIFTL": "<<",
+    "BSHIFTR": ">>",
+    "LPAREN": "(",
+    "RPAREN": ")",
+    "LBRACKET": "[",
+    "RBRACKET": "]",
+    "COMMA": ",",
+    "EQ": "==",
+    "NEQ": "!=",
+    "LT": "<",
+    "LTE": "<=",
+    "GT": ">",
+    "GTE": ">=",
+    "SEMI": ";",
+    "ASSIGN": "=",
+
+    "PROGRAM": "PROGRAM",
+    "INTEGER": "INTEGER",
+    "REAL": "REAL",
+    "VAR": "VAR",
+    "FUNCTION": "FUNCTION",
+    "LCURL": "{",
+    "RCURL": "}",
+    "FOR": "FOR",
+    "TO": "TO",
+    "DO": "DO",
+    "IF": "IF",
+    "ELSE": "ELSE"
+  },
+
+  "SEMANTICS":
+  {
+    "program": {"id":0, "name":"ID", "block": "block"},
+    "function": {"id":1, "name":"ID", "formals": "formals", "block": "block"},
+    "call": {"id":2, "name":"ID", "actuals": "actuals"},
+    "variable": {"id":3, "name":"ID", "type": "type"},
+    "assign": {"id":4, "name":"varleft", "indices":"indices", "value":"expr"},
+    "formal": {"id":5, "name":"ID", "type": "type"},
+    "varref": {"id":6, "name":"ID"},
+    "for": {"id":7, "from":"assign", "condition":"expr", "increment": "increment", "block":"block"},
+    "if": {"id":8, "condition":"expr", "true":"block", "false": "elseBlock"},
+    "expr": {"id":9},
+    "term": {"id":10}
+  },
+
+  "EXTERNALS":
+  {
+    "ledCount": {},
+    "setPixelColor": {"pixelNr":"int", "color":"int"},
+    "leds": {},
+    "setPixels": {"leds": "array"},
+    "hsv": {"h":"uint8", "s":"uint8", "v":"uint8"},
+
+    "setRange": {"from":"uint16", "to":"uint16", "color":"uint32"},
+    "fill": {"color":"uint32"},
+    "colorBlend": {"color1":"uint32", "color2":"uint32", "blend":"uint16"},
+    "colorWheel": {"pos":"uint8"},
+    "colorFromPalette": {"index":"uint8", "brightness":"uint8"},
+    "beatSin": { "bpm":"uint16", "lowest":"uint8", "highest":"uint8", "timebase":"uint32", "phase_offset":"uint8"},
+    "fadeToBlackBy": {"fadeBy":"uint8"},
+
+    "segcolor": {"index":"uint8"},
+    "speedSlider": {"return":"uint8"},
+    "intensitySlider": {"return":"uint8"},
+    "custom1Slider": {"return":"uint8"},
+    "custom2Slider": {"return":"uint8"},
+    "custom3Slider": {"return":"uint8"},
+    "sampleAvg": {"return": "double"},
+
+    "shift": {"delta": "int"},
+    "circle2D": {"degrees": "int"}, 
+
+    "constrain": {"amt":"any", "low":"any", "high":"any"},
+    "random": {"return": "int"},
+    "sin": {"degrees": "real"},
+    "cos": {"degrees": "real"},
+    "abs": {"value": "real"},
+    "min": {"value1": "real", "value2": "real"},
+    "max": {"value1": "real", "value2": "real"},
+
+    "hour": {"return":"uint8"},
+    "minute": {"return":"uint8"},
+    "second": {"return":"uint8"},
+    "millis": {},
+
+    "printf": {"args": "__VA_ARGS__"}
+  }
+
+}
