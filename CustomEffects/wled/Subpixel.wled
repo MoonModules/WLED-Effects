@@ -1,0 +1,28 @@
+// move pixels from left to right based on millis and sinus
+// idea by @Atuline
+// use the intensity slider to make the amount of pixels more or less
+
+program Subpixel
+{
+
+  t = 0                                   // used by both functions
+  reverseSlider = 0
+
+  function renderFrame() 
+  {
+    t = (sin(millis() / 1000) + 1) / 2    // Make a slow sine wave and convert output range from -1.0 and 1.0 to between 0 and 1.0.
+    t = t * ledCount                      // Now map to the length of the strand.
+    reverseSlider = 256 - intensitySlider
+  }
+
+  function renderLed(i) 
+  {
+    diff = min(abs(t - i), 256/reverseSlider) // Get difference between t and current location. Greater distance = lower brightness.
+                                              // Let's not overflow.
+    bri = 256 - diff * reverseSlider          // Scale the brightness to up to 255. Closer = brighter.
+    leds[i] = hsv(0, 255, bri)                // Set the led value
+  }
+
+  // setPixels(leds) will be done if leds has been set in renderFrame or renderLed
+
+}

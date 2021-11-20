@@ -1,0 +1,16 @@
+//show hour, minute and second as pixel
+
+program Clock
+{
+
+  function renderFrame() 
+  {
+    setRange(0,ledCount, 0)         //clear all pixels
+
+    //set h, m, s dots
+    setPixelColor(hour, 25)
+    setPixelColor(minute, 125)
+    setPixelColor(second, 225)
+  }
+
+}

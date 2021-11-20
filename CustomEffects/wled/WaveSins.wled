@@ -1,0 +1,15 @@
+// Uses beatsin8() + phase shifting. By: Andrew Tuline
+// Existing effect
+
+program WaveSins
+{
+
+  function renderLed(i) 
+  {
+    bri = sin(millis() / 4 + i * intensitySlider) * 128 + 128
+    leds[i] = colorFromPalette(beatSin(speedSlider, custom1Slider, custom1Slider + custom2Slider, 0, i * custom3Slider), bri)
+  }
+
+  // setPixels(leds) will be done if leds has been set in renderFrame or renderLed
+
+}

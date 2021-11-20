@@ -1,0 +1,11 @@
+//use random function to get the color
+
+program ColorRandom
+{
+
+   function renderLed(i) 
+   {
+     setPixelColor(i, random())
+   }
+
+}

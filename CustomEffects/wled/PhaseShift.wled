@@ -1,0 +1,29 @@
+// shift pixels left and right
+// idea by @Atuline
+
+program PhaseShift
+{
+
+  pixelCounter = 3
+  countAdd = 1
+
+  function renderFrame() 
+  {
+    pixelCounter = pixelCounter + countAdd
+
+    if (pixelCounter > 15 ) {
+      countAdd = 0 - 1
+    }
+
+    if (pixelCounter < 3 ) {
+      countAdd = 1
+    }
+
+  }
+
+  function renderLed(i) 
+  {
+    setPixelColor(i, i * pixelCounter)
+  }
+  
+}

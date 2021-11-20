@@ -1,0 +1,13 @@
+// use a (precompiled) function (shift) to change lots of pixels
+// idea by @Haribro
+
+program Shift
+{
+
+  function renderFrame() 
+  {
+    setPixelColor(0, random())
+    shift(1)
+  }
+
+}
