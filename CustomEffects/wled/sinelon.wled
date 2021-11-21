@@ -1,0 +1,52 @@
+// Sinelon moving up and down the strand with a sinewave and fade.
+
+// Speed slider adjust speed.
+// Intensity slider adjusts the fade rate.
+// Custom1 slider adjusts speed for 2nd one with DualSinelon
+
+// By Andrew Tulne
+
+
+/* program Sinelon
+{
+
+  function renderFrame() {
+
+    fadeToBlackBy(intensitySlider/4)             // Fade everything, but does not work with setPixelColor
+    locn = millis() / ((256 - speedSlider) * 4)  // A speed adjustable counter.
+    newVal = (sin(locn) + 1) / 2                 // Convert that to a sinewave that goes from 0 to 1.0.
+    newVal = newVal * ledCount                   // Now, map that to our ledCount.
+    leds[newVal] = colorFromPalette(0,255)       // Set the led, but NOT with setPixelColor
+  }
+}
+*/
+
+
+
+program DualSinelon
+{
+	
+  function renderFrame() {
+
+    fadeToBlackBy(intensitySlider/4)             // Fade everything, but does not work with setPixelColor
+
+    locn = millis() / ((256 - speedSlider) * 4)  // A speed adjustable counter.
+    newVal = (sin(locn) + 1)                     // Convert that to a sinewave that goes from 0 to 2.0.
+
+    locn2 = millis() / ((256 - custom1Slider) * 4)
+    newVal2 = (sin(locn2) + 1)                   // Convert that to a sinewave that goes from 0 to 2.0.
+
+    location = (newVal + newVal2) / 4            // Reduce those sinewaves to 0 to 1.0.
+    location = location * ledCount               // Map to the ledCount.
+
+    leds[location] = colorFromPalette(0,255)     // Set the led, but NOT with setPixelColor
+  }
+
+
+
+
+
+
+
+
+}
