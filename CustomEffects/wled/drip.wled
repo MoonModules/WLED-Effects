@@ -1,0 +1,39 @@
+/// Drip
+// By: Andrew Tuline
+
+// A simple, single drip.
+
+// Fade uses the intensity slider.
+// Sometimes, the crash is so bad, even if you load a valid program, you still need to reboot.
+
+
+
+Program Drip
+{
+
+  dripSpd = 0
+//  grav = .010                           // You can't preface the number with . or -, and no math either.
+  colr = 1
+  bri = 64
+
+  function renderFrame() {
+
+    grav = 10 / 1000                      // I tried speedSlider / 10000, but it was unreliable for some reason.
+                                           // Some combinations of number cause real issues. 
+
+    fadeToBlackBy(intensitySlider / 4)
+
+    dripSpd = dripSpd + grav
+    dripLocn = dripLocn - dripSpd
+
+    if (dripLocn > 0 ) {
+      leds[dripLocn] = colorFromPalette(colr, bri)
+    }
+
+   if (dripLocn <= 0) {
+      dripLocn = ledCount - 1
+      dripSpd = 0
+    }
+
+  }
+}
