@@ -32,7 +32,7 @@ Program Ripple
     bri = 255/step
     leds[ledL] = colorFromPalette(colour,bri)
     leds[ledR] = colorFromPalette(colour,bri)
-    step = step + 1
+    step += 1
 
     if (step == maxsteps) {
         step = 0-1
