@@ -1,10 +1,11 @@
 {
-  "meta": {"version": "0.1.0", "start":"program"},
+  "meta": {"version": "0.1.1", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
   "variable" : ["VAR", "ID"],
-  "assign" : ["varleft", {"?": ["LBRACKET", "indices", "RBRACKET"]}, "ASSIGN", "expr"],
+  "assign" : ["varref", {"?": ["LBRACKET", "indices", "RBRACKET"]}, "assignoperator", "expr"],
+  "assignoperator": [{"|":["ASSIGN+", "ASSIGN-", "ASSIGN*", "ASSIGN/", "ASSIGN"]}],
   "indices" : ["expr", {"*": ["COMMA", "expr"]}],
   "function" : ["FUNCTION", "ID", {"?": ["LPAREN", "formals", "RPAREN"]}, "block"],
   "formals" : {"?":["formal",{"*":["COMMA","formal"]}]},
@@ -16,10 +17,9 @@
   "if": ["IF", "LPAREN", "expr", "RPAREN", "block", {"?":["ELSE", "elseBlock"]}],
   "elseBlock": ["block"],
   "expr" : [ "term", {"*": [{"|": ["PLUS", "MINUS", "EQ", "LT", "LTE", "GT", "GTE"]}, "term"]}],
-  "term" : [ "factor", {"*": [{"|": ["MUL", "DIV", "MOD", "BSHIFTL", "BSHIFTR"]}, "factor"]}],
+  "term" : [ "factor", {"*": [{"|": ["MUL", "DIV", "MOD", "BSHIFTL", "BSHIFTR", "AND","OR"]}, "factor"]}],
   "factor" : {"|": ["call", "varref", "INTEGER_CONST", "REAL_CONST", ["LPAREN", "expr", "RPAREN"]]},
   "varref": "ID",
-  "varleft": "ID",
 
   "TOKENS":
   {
@@ -44,8 +44,14 @@
     "LTE": "<=",
     "GT": ">",
     "GTE": ">=",
+    "AND": "&&",
+    "OR": "||",
     "SEMI": ";",
     "ASSIGN": "=",
+    "ASSIGN+": "+=",
+    "ASSIGN-": "-=",
+    "ASSIGN*": "*=",
+    "ASSIGN/": "/=",
 
     "PROGRAM": "PROGRAM",
     "INTEGER": "INTEGER",
@@ -59,21 +65,6 @@
     "DO": "DO",
     "IF": "IF",
     "ELSE": "ELSE"
-  },
-
-  "SEMANTICS":
-  {
-    "program": {"id":0, "name":"ID", "block": "block"},
-    "function": {"id":1, "name":"ID", "formals": "formals", "block": "block"},
-    "call": {"id":2, "name":"ID", "actuals": "actuals"},
-    "variable": {"id":3, "name":"ID", "type": "type"},
-    "assign": {"id":4, "name":"varleft", "indices":"indices", "value":"expr"},
-    "formal": {"id":5, "name":"ID", "type": "type"},
-    "varref": {"id":6, "name":"ID"},
-    "for": {"id":7, "from":"assign", "condition":"expr", "increment": "increment", "block":"block"},
-    "if": {"id":8, "condition":"expr", "true":"block", "false": "elseBlock"},
-    "expr": {"id":9},
-    "term": {"id":10}
   },
 
   "EXTERNALS":
