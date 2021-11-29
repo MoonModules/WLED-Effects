@@ -8,7 +8,7 @@ program Clock2D
     setRange(0,ledCount, 0) // clear all pixels
 
     //set 5 minute dots
-    for (i = 0; i < 360; i = i + 30)
+    for (i = 0; i < 360; i += 30)
     {
       setPixelColor(circle2D(i), 225)
     }

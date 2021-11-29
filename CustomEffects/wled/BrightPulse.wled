@@ -6,7 +6,7 @@ program BrightPulse
 
   function renderFrame() 
   {
-    lum = constrain(sampleAvg * 256 / (256 - speed), 0, 255)
+    lum = constrain(sampleAvg * 256 / (256 - speedSlider), 0, 255)
     fill(colorBlend(segcolor(1), segcolor(0), lum))
   }
 

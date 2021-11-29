@@ -18,11 +18,11 @@ program Kitt
      
      if (goingUp) {
        setPixelColor(pixelCounter - 5, 0)
-       pixelCounter = pixelCounter + 1
+       pixelCounter += 1
      }
      else {
        setPixelColor(pixelCounter + 5, 0)
-       pixelCounter = pixelCounter - 1
+       pixelCounter -= 1
      }
    }
 

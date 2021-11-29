@@ -9,7 +9,7 @@ program PhaseShift
 
   function renderFrame() 
   {
-    pixelCounter = pixelCounter + countAdd
+    pixelCounter += countAdd
 
     if (pixelCounter > 15 ) {
       countAdd = 0 - 1

@@ -1,11 +1,9 @@
-// Sinelon moving up and down the strand with a sinewave and fade.
+
+// Sinelon moving up and down the strand with a sinewave.
 
 // Speed slider adjust speed.
 // Intensity slider adjusts the fade rate.
-// Custom1 slider adjusts speed for 2nd one with DualSinelon
-
-// By Andrew Tulne
-
+// custom1 slider adjusts speed for 2nd one with DualSinelon
 
 /* program Sinelon
 {
@@ -37,7 +35,7 @@ program DualSinelon
     newVal2 = (sin(locn2) + 1)                   // Convert that to a sinewave that goes from 0 to 2.0.
 
     location = (newVal + newVal2) / 4            // Reduce those sinewaves to 0 to 1.0.
-    location = location * ledCount               // Map to the ledCount.
+    location *= ledCount                         // Map to the ledCount.
 
     leds[location] = colorFromPalette(0,255)     // Set the led, but NOT with setPixelColor
   }
