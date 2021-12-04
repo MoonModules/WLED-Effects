@@ -2,12 +2,8 @@
 
 program default
 {
-   pixelCounter = 0
-
-   function renderFrame() 
-   {
-     setPixelColor(pixelCounter, pixelCounter)
-     pixelCounter += 1
-   }
-  
+  function renderFrame() 
+  {
+    leds[counter] = colorFromPalette(counter, counter)
+  }
 }

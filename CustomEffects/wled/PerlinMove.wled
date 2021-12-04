@@ -1,0 +1,18 @@
+program PerlinMove
+{
+
+  function renderFrame() 
+  {
+    fadeOut(255 - custom1Slider)
+
+    for (i=0; i < (intensitySlider/16+1); i += 1)
+    {
+      y = millis() * 128 / (260-speedSlider)
+      x = y + i * 15000
+      locn = iNoise(x, y)                                // Get a new pixel location from moving noise.
+      pixloc = map(locn, 50*256, 192*256, 0, ledCount)   // Map that to the length of the strand.
+      setPixelColor(pixloc, pixloc)
+    }
+  }
+
+}

@@ -1,5 +1,5 @@
 {
-  "meta": {"version": "0.1.1", "start":"program"},
+  "meta": {"version": "0.2.0", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
@@ -82,7 +82,10 @@
     "colorFromPalette": {"index":"uint8", "brightness":"uint8"},
     "beatSin": { "bpm":"uint16", "lowest":"uint8", "highest":"uint8", "timebase":"uint32", "phase_offset":"uint8"},
     "fadeToBlackBy": {"fadeBy":"uint8"},
+    "iNoise": {"x":"uint32", "y":"uint32"},
+    "fadeOut": {"rate":"uint8"},
 
+    "counter": {"return": "uint32"},
     "segcolor": {"index":"uint8"},
     "speedSlider": {"return":"uint8"},
     "intensitySlider": {"return":"uint8"},
@@ -95,7 +98,9 @@
     "circle2D": {"degrees": "int"}, 
 
     "constrain": {"amt":"any", "low":"any", "high":"any"},
-    "random": {"return": "int"},
+    "map": {"x":"int", "in_min":"int", "in_max":"int", "out_min":"int", "out_max":"int"},
+    "seed": {"seed": "uint16"},
+    "random": {"return": "uint16"},
     "sin": {"degrees": "real"},
     "cos": {"degrees": "real"},
     "abs": {"value": "real"},
