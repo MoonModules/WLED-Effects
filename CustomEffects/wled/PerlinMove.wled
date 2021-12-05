@@ -5,13 +5,20 @@ program PerlinMove
   {
     fadeOut(255 - custom1Slider)
 
-    for (i=0; i < (intensitySlider/16+1); i += 1)
+    for (i=0; i < (intensitySlider/16+1); i += 1)       // For performance reasons, only change a few pixels per render.
     {
-      y = millis() * 128 / (260-speedSlider)
+      y = millis() * 128 / (260-speedSlider)            // Moves at a varying speed.
+
       x = y + i * 15000
       locn = iNoise(x, y)                                // Get a new pixel location from moving noise.
+
+      x = millis() * 2 + i * 15000                       // Colours change at a lower rate.
+      clr = iNoise(x, yy)
+
       pixloc = map(locn, 50*256, 192*256, 0, ledCount)   // Map that to the length of the strand.
-      setPixelColor(pixloc, pixloc)
+      pixclr = map(clr, 50*256, 192*256, 0, 255)         // Map that to the palette range.
+
+      setPixelColor(pixloc, pixclr)
     }
   }
 
