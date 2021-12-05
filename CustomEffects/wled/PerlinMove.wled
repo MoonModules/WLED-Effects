@@ -13,7 +13,7 @@ program PerlinMove
       locn = iNoise(x, y)                                // Get a new pixel location from moving noise.
 
       x = millis() * 2 + i * 15000                       // Colours change at a lower rate.
-      clr = iNoise(x, yy)
+      clr = iNoise(x, 0)
 
       pixloc = map(locn, 50*256, 192*256, 0, ledCount)   // Map that to the length of the strand.
       pixclr = map(clr, 50*256, 192*256, 0, 255)         // Map that to the palette range.
