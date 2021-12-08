@@ -1,0 +1,22 @@
+// Fade leds in and out using pseudo random numbers.
+// By @Atuline
+
+
+program twinkleup
+{
+
+  function renderFrame() 
+  {
+    seed(535)
+  }
+
+  function renderLed(i) 
+  {
+    startVal = random() % 255
+    freq = random() % 16 + 16
+    pixbri = (sin(startVal + millis()/(255-freq)) + 1) * 128
+    temp = random() % 255
+    leds[i] = colorFromPalette(temp+millis()/100,pixbri)
+  }
+}
+
