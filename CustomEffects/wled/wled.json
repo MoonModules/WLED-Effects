@@ -1,5 +1,5 @@
 {
-  "meta": {"version": "0.2.0", "start":"program"},
+  "meta": {"version": "0.2.1", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
@@ -101,16 +101,22 @@
     "map": {"x":"int", "in_min":"int", "in_max":"int", "out_min":"int", "out_max":"int"},
     "seed": {"seed": "uint16"},
     "random": {"return": "uint16"},
-    "sin": {"degrees": "real"},
-    "cos": {"degrees": "real"},
-    "abs": {"value": "real"},
-    "min": {"value1": "real", "value2": "real"},
-    "max": {"value1": "real", "value2": "real"},
+    "sin": {"degrees": "double", "return": "double"},
+    "cos": {"degrees": "double", "return": "double"},
+    "abs": {"value": "double", "return": "double"},
+    "min": {"value1": "double", "value2": "double", "return": "double"},
+    "max": {"value1": "double", "value2": "double", "return": "double"},
 
     "hour": {"return":"uint8"},
     "minute": {"return":"uint8"},
     "second": {"return":"uint8"},
-    "millis": {},
+    "millis": {"return": "uint32"},
+
+    "time": {"inVal":"double", "return": "double"},
+    "triangle": {"t":"double", "return": "double"},
+    "wave": {"v":"double", "return": "double"},
+    "square": {"v":"double", "t":"double", "return": "double"},
+    "clamp": {"d":"double", "min":"double", "max": "double"},
 
     "printf": {"args": "__VA_ARGS__"}
   }

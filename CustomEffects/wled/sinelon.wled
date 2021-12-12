@@ -40,11 +40,4 @@ program DualSinelon
     leds[location] = colorFromPalette(0,255)     // Set the led, but NOT with setPixelColor
   }
 
-
-
-
-
-
-
-
 }

@@ -5,9 +5,6 @@
 program Subpixel
 {
 
-  t = 0                                   // used by both functions
-  reverseSlider = 0                       // used by both functions
-
   function renderFrame() 
   {
     t = (sin(millis() / 1000) + 1) / 2    // Make a slow sine wave and convert output range from -1.0 and 1.0 to between 0 and 1.0.
