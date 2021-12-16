@@ -5,7 +5,7 @@ program PerlinMove
   {
     fadeOut(255 - custom1Slider)
 
-    for (i=0; i < (intensitySlider/16+1); i += 1)       // For performance reasons, only change a few pixels per render.
+    for (i=0; i < (intensitySlider/16+1); i ++)       // For performance reasons, only change a few pixels per render.
     {
       y = millis() * 128 / (260 - speedSlider)            // Moves at a varying speed.
 

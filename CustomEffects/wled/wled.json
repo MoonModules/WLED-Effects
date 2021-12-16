@@ -1,11 +1,11 @@
 {
-  "meta": {"version": "0.2.1", "start":"program"},
+  "meta": {"version": "0.2.2", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
   "variable" : ["VAR", "ID"],
-  "assign" : ["varref", {"?": ["LBRACKET", "indices", "RBRACKET"]}, "assignoperator", "expr"],
-  "assignoperator": [{"|":["ASSIGN+", "ASSIGN-", "ASSIGN*", "ASSIGN/", "ASSIGN"]}],
+  "assign" : ["varref", {"?": ["LBRACKET", "indices", "RBRACKET"]},"assignoperator", {"?":["expr"]}],
+  "assignoperator": [{"|":["ASSIGN+", "ASSIGN-", "ASSIGN*", "ASSIGN/", "PLUSPLUS", "MINMIN", "ASSIGN"]}],
   "indices" : ["expr", {"*": ["COMMA", "expr"]}],
   "function" : ["FUNCTION", "ID", {"?": ["LPAREN", "formals", "RPAREN"]}, "block"],
   "formals" : {"?":["formal",{"*":["COMMA","formal"]}]},
@@ -15,10 +15,13 @@
   "for": ["FOR", "LPAREN", "assign", "SEMI", "expr", "SEMI", "increment", "RPAREN", "block"],
   "increment": ["assign"],
   "if": ["IF", "LPAREN", "expr", "RPAREN", "block", {"?":["ELSE", "elseBlock"]}],
+  "cex": ["QMARK", "expr", "QMARK", "trueExpr", "COLON", "falseExpr"],
   "elseBlock": ["block"],
-  "expr" : [ "term", {"*": [{"|": ["PLUS", "MINUS", "EQ", "LT", "LTE", "GT", "GTE"]}, "term"]}],
+  "trueExpr": ["expr"],
+  "falseExpr": ["expr"],
+  "expr" : [ "term", {"*": [{"|": ["PLUS", "MINUS", "EQ", "NEQ", "LT", "LTE", "GT", "GTE"]}, "term"]}],
   "term" : [ "factor", {"*": [{"|": ["MUL", "DIV", "MOD", "BSHIFTL", "BSHIFTR", "AND","OR"]}, "factor"]}],
-  "factor" : {"|": ["call", "varref", "INTEGER_CONST", "REAL_CONST", ["LPAREN", "expr", "RPAREN"]]},
+  "factor" : {"|": [["MINUS", "factor"], "cex","call", "varref", "INTEGER_CONST", "REAL_CONST", ["LPAREN", "expr", "RPAREN"]]},
   "varref": "ID",
 
   "TOKENS":
@@ -52,6 +55,8 @@
     "ASSIGN-": "-=",
     "ASSIGN*": "*=",
     "ASSIGN/": "/=",
+    "PLUSPLUS": "++",
+    "MINMIN": "--",
 
     "PROGRAM": "PROGRAM",
     "INTEGER": "INTEGER",
@@ -64,7 +69,9 @@
     "TO": "TO",
     "DO": "DO",
     "IF": "IF",
-    "ELSE": "ELSE"
+    "ELSE": "ELSE",
+    "QMARK": "?",
+    "COLON": ":"
   },
 
   "EXTERNALS":
