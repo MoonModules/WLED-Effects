@@ -26,7 +26,8 @@ Program Beatmania
     bri3 = beatSin(intensitySlider/8+132,255)			// One too many beats.
 
     locn12 = locn1+locn2
-    colr12 = colr1+color2
+    colr12 = colr1+colr2
+    bri12 = bri1+bri2
     leds[locn12] = colorFromPalette(colr12,bri12)
     leds[locn1] = colorFromPalette(colr2,bri1)
     leds[locn2%(ledCount-1)] = colorFromPalette(colr1,bri2)

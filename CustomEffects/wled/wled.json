@@ -1,12 +1,11 @@
 {
-  "meta": {"version": "0.2.2", "start":"program"},
+  "meta": {"version": "0.2.3", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
   "variable" : ["VAR", "ID"],
-  "assign" : ["varref", {"?": ["LBRACKET", "indices", "RBRACKET"]},"assignoperator", {"?":["expr"]}],
+  "assign" : ["varref","assignoperator", {"?":["expr"]}],
   "assignoperator": [{"|":["ASSIGN+", "ASSIGN-", "ASSIGN*", "ASSIGN/", "PLUSPLUS", "MINMIN", "ASSIGN"]}],
-  "indices" : ["expr", {"*": ["COMMA", "expr"]}],
   "function" : ["FUNCTION", "ID", {"?": ["LPAREN", "formals", "RPAREN"]}, "block"],
   "formals" : {"?":["formal",{"*":["COMMA","formal"]}]},
   "formal" : "ID",
@@ -22,7 +21,8 @@
   "expr" : [ "term", {"*": [{"|": ["PLUS", "MINUS", "EQ", "NEQ", "LT", "LTE", "GT", "GTE"]}, "term"]}],
   "term" : [ "factor", {"*": [{"|": ["MUL", "DIV", "MOD", "BSHIFTL", "BSHIFTR", "AND","OR"]}, "factor"]}],
   "factor" : {"|": [["MINUS", "factor"], "cex","call", "varref", "INTEGER_CONST", "REAL_CONST", ["LPAREN", "expr", "RPAREN"]]},
-  "varref": "ID",
+  "varref": ["ID", {"?": ["LBRACKET", "indices", "RBRACKET"]}],
+  "indices" : ["expr", {"*": ["COMMA", "expr"]}],
 
   "TOKENS":
   {
