@@ -1,0 +1,54 @@
+/* color twinkle bounce
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+    This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(.05)*PI2
+    t2 = time(.05)*PI2
+  }
+
+  export function render(index) {
+    a = (1 + sin((index/2  +5* sin(t1)) ))/2
+    b = (time(.1) + 1 + sin((index/2  +5* sin(t2)) ))
+    v = (a*a*a*a)*.5
+    hsv(b,1,v)
+  }
+
+
+*/
+
+program color_twinkle_bounce {
+
+  function renderFrame() {
+    PI2 = 6.28318
+    t1 = time(.05) * PI2
+    t2 = time(.05) * PI2
+  }
+
+  function renderLed(index) {
+    aa = index / 2 + 5 * (sin(t1))
+    a = (1 + sin(aa)) / 2
+    ba = index / 2 + 5 * sin(t2)
+    b = time(.1) + 1 + sin(ba)
+    v = a * a * a
+    leds[index] = hsv(b * 255, 255, v * 255)
+  }
+}

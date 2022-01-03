@@ -1,0 +1,47 @@
+/* rainbow pinwheel
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(.05)
+  }
+
+  export function render(index) {
+    h = wave(t1 + index/pixelCount)
+    s = 2
+    v = 1
+    hsv(h, s, v)
+  }
+
+*/
+
+
+program rainbow_pinwheel{
+
+  function renderFrame() {
+    t1 = time(.05)
+  }
+
+  function renderLed(index) {
+    h = wave(t1 + index / ledCount)
+    leds[index] = hsv(h * 255, 255, 255)
+  }
+}

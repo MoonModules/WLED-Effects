@@ -1,0 +1,59 @@
+/* snake
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  distance = 10
+
+  export function beforeRender(delta) {
+    t1 = time(.1)
+  }
+
+  export function render(index) {
+    h = index/pixelCount
+    s = 1
+    v = 1
+
+    head = t1 * pixelCount
+    offset = (head - index + pixelCount) % pixelCount
+
+    hsv(h, s, clamp(1 - offset / distance, 0, 1))
+  }
+
+*/
+
+
+program snake {
+  
+  distance = 10
+
+  function renderFrame() {
+    t1 = time(.1)
+  }
+
+  function renderLed(index) {
+    h = index / ledCount
+    s = 1
+    head = t1 * ledCount
+    offset = (head - index + ledCount) % ledCount
+    v = clamp(1 - offset / distance, 0, 1)
+    leds[index] = hsv(h * 255, 255, v * 255)
+  }
+}

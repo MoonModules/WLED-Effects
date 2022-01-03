@@ -1,0 +1,34 @@
+/* firework dust
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+   Original code:
+
+  export function render(index) {
+    hsv(random(1), 1, random(1) > .995 )
+  }
+
+*/
+
+
+program firework_dust {
+  
+  function renderFrame() {
+    leds[random()] = hsv(random(), 255, (random() > 58000) * 255)
+  }
+}

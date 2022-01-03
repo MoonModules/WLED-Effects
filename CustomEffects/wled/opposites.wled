@@ -1,0 +1,64 @@
+/* opposites
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(.1)
+    t2 = time(.2)
+  }
+
+  export function render(index) {
+    il = index/pixelCount
+    w1 = wave(t1 + il)
+    w2 = wave(t2 - il)
+    w3 = wave((il + w1 + w2 )%1)
+    h = w3 %.3
+    h = (h > .15 ? h : h +.5) + t1
+    s = 1
+    v = ((w1+.1) * (w2+.1) * (w3+.1))
+    v = v*v
+    hsv(h,s,v)
+  }
+
+*/
+
+
+program opposites {
+  function renderFrame() {
+    t1 = time(.1)
+    t2 = time(.2)
+  }
+
+  function renderLed(index) {
+    il = index / ledCount
+    w1 = wave(t1 + il)
+    w2 = wave(t2 - il)
+    w3 = wave((il + w1 + w2 ) % 1)
+    h = w3 % .3
+
+//  h = (h >  .15 ? h : h + .5) + t1
+    h = ( ? h >  .15 ? h : h + .5) + t1   // Interim ternary operator
+
+    v = ((w1 + .1) * (w2 + .1) * (w3 + .1))
+    v = v * 2
+    leds[index] = hsv(h * 255, 255, v * 255)
+  }
+}

@@ -1,0 +1,54 @@
+/* marching rainbow
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: June, 2018
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+  t1 = time(.1)
+  t2 = time(.05)
+  }
+
+  export function render(index) {
+  w1 = wave(t1 + index/pixelCount)
+  w2 = wave(t2-index/pixelCount*10+.2)
+  v = w1 - w2
+  h = wave(wave(wave(t1 + index/pixelCount)) - index/pixelCount)
+  hsv(h,1,v)
+  }
+
+*/
+
+
+program marching_rainbow {
+
+  function renderFrame() {
+    t1 = time(.1)
+    t2 = time(.05)
+  }
+
+  function renderLed(index) {
+    w1 = wave(t1 + index / ledCount)
+    w2 = wave(t2 - index / ledCount * 10 + .2)
+    v = w1 - w2
+    ha = wave(t1 + index / ledCount)
+    h = wave(wave(ha) - index / ledCount)
+    leds[index] = hsv(h * 255, 255, v * 255)
+  }
+}

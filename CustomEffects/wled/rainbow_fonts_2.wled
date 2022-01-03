@@ -1,0 +1,57 @@
+/* rainbow fonts 2
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 =  time(.1)
+    scale = pixelCount/2
+    offset = sin(time(.2)* PI2) * pixelCount/10
+    offsetL = offset/pixelCount
+  }
+
+  export function render(index) {
+    c = 1-abs((index + offset) - scale)/scale
+    c = wave(c)
+    c = wave(c + t1 + offsetL)
+    hsv(c,1,.2)
+  }
+
+*/
+
+
+
+program rainbow_fonts_2 {
+
+  function renderFrame() {
+    PI2 = 6.28318
+    t1 =  time(.1)
+    scale = ledCount / 2
+    offset = sin(time(.2) * PI2) * ledCount / 10
+    offsetL = offset / ledCount
+  }
+
+  function renderLed(index) {
+    c = 1-abs((index + offset) - scale) / scale
+    c = wave(c)
+    c = wave(c + t1 + offsetL)
+    leds[index] = hsv(c * 255, 255, 255)
+  }
+}

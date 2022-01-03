@@ -1,0 +1,64 @@
+/* block reflections
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://www.bhencke.com/pixelblaze-expression
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+      export function beforeRender(delta) {
+        t2 = time(0.1) * PI2
+        t1 = time(.1)
+        t3 = time(.5)
+        t4 = time(0.2) * PI2
+      }
+
+      export function render(index) {
+        h = sin(t2)
+        m = (.3 + triangle(t1) * .2)
+        h = h + (((index - pixelCount / 2) / pixelCount * ( triangle(t3) * 10 + 4 * sin(t4)) % m))
+        s = 1;
+        v = ((abs(h) + abs(m) + t1) % 1);
+        v = v * v
+        hsv(h, s, v)
+      }
+
+*/
+
+
+program block_reflections {
+
+  function renderFrame() {
+    PI2 = 6.2832
+    t2 = time(.1) * PI2
+    t1 = time(.1)
+    t3 = time(.5)
+    t4 = time(.2) * PI2
+  }
+
+  function renderLed(index) {
+    h = sin(t2)
+    m = (.3 + triangle(t1) * .2)
+    hh = (index - ledCount / 2) / ledCount
+    hhh = triangle(t3) * 10 + 4 * sin(t4)
+    h += (hh * hhh) % m
+    s = 1
+    v = (abs(h) + abs(m) + t1) % 1
+    v = v * v
+    leds[index] = hsv(h * 255, s * 255, v * 255)
+  }
+}

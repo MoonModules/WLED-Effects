@@ -1,0 +1,4 @@
+.checkmark, .radiomark {
+    background-color: var(--c-4);
+    border: 1px solid var(--c-2);
+}

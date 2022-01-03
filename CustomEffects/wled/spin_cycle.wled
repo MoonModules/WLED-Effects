@@ -1,0 +1,53 @@
+/* spin cycle
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(.1)
+    t2 = time(.1)
+  }
+
+  export function render(index) {
+    h = index/pixelCount *(5+wave(t1)*5) + wave(t2)*2
+    h = (h %.5) + t1
+    v = triangle((index/pixelCount*5 + t1*10) %1)
+    v = v*v*v
+    hsv(h,1,v)
+  }
+
+*/
+
+
+program spin_cycle {
+  
+  function renderFrame() {
+    t1 = time(.1)
+    t2 = time(.1)
+  }
+
+  function renderLed(index) {
+    h = index / ledCount * (5 + wave(t1) * 5) + wave(t2) * 2
+    h = (h % .5) + t1
+    v = triangle((index / ledCount * 5 + t1 * 10) % 1)
+    v = v * v * v
+    leds[index] = hsv(h * 255, 255, v * 255)
+  }
+}

@@ -1,0 +1,65 @@
+/* firework rocket sparks
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+	export function beforeRender(delta) {
+	  t1 = time(.05)
+	  t2 = time(0.0001) * 0.2
+	}
+
+	export function render(index) {
+	  v = wave(t1 + index/pixelCount)
+	  v2 = wave(t1 + (index+10)/pixelCount)
+	  s = (v2 < 0.9995)
+	  v = (v > .95 && random(1) > .95) * v
+	  h = random(1)
+	  h = (s ? h : (index/20)%.2)
+	  hsv(h, 1-s, (1-s) + v )
+	}
+
+*/
+
+
+program firework_rocket_sparks {
+
+  function renderFrame() {
+    t1 = time(.05)
+    t2 = time(.0001) * .2
+  }
+
+  function renderLed(index) {
+    v = wave(t1 + index / ledCount)
+    v2 = wave(t1 + (index + 10) / ledCount)
+    s = (v2 < .95)
+    v = (v > .95 && (random() > 59000)) * v
+    h = random() / 65535
+  
+    h = ? s ? h : (index / 20) % .2          // Interim ternary operator
+//  h = s ? h : (index / 20) % .2
+
+    leds[index] = hsv(h * 255, (1 - s) * 255, ((1 - s) + v) * 255 )
+  }
+}
+
+
+
+
+

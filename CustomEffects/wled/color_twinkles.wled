@@ -1,0 +1,58 @@
+/* color twinkles
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(.15)*PI2
+    t2 = time(.5)*PI2
+  }
+
+  export function render(index) {
+    a = (1+sin(index/3 + PI2*sin(index/2+t1)))/2
+    a = a*a*a*a
+    a = (a > .1 ? a : 0)
+    b = sin(index/3 + PI2*sin(index/2+t2))
+    hsv(b,1,a/2)
+  }
+
+*/
+
+
+program color_twinkles {
+
+  function renderFrame() {
+    PI2 = 6.28318
+    t1 = time(.15) * PI2
+    t2 = time(.5) * PI2
+  }
+
+  function renderLed(index) {
+    aa = index / 3 + PI2 * sin(index / 2 + t1)
+    a = (1 + sin(aa)) / 2
+
+    a = ? a > .1 ? a : 0                         // Interim ternary operator
+//  a = a > .1 ? a : 0    
+
+    bb = index / 3 + PI2 * sin(index / 2 + t2)
+    b = sin(bb)
+    leds[index] = hsv(b * 255, 255, a * 255)
+  }
+}

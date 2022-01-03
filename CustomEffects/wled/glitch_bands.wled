@@ -1,0 +1,74 @@
+/* glitch bands
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(0.1)*PI2;
+    t2 = time(.1);
+    t3 = time(.5);
+    t4 = time(0.2)*PI2;
+    t5 = time(.05);
+    t6 = time(.02);
+  }
+
+  export function render(index) {
+    h = sin(t1)
+    m = (.3 + triangle(t2) * .2)
+    h = h + (((index - pixelCount / 2) / pixelCount * ( triangle(t3) * 10 + 4 * sin(t4)) % m))
+    s1 = triangle((t5 + index / pixelCount * 5) % 1);
+    s1 = s1 * s1
+    s2 = triangle((t6 - (index - pixelCount) / pixelCount) % 1);
+    s2 = s2 * s2 * s2 * s2
+    s = 1 - triangle(s1 * s2)
+    v = (s1 > s2) + .5
+    hsv(h, s, v)
+  }
+
+*/
+
+
+program glitch_bands {
+
+  function renderFrame() {
+    PI2 = 6.28318
+    t1 = time(.1) * PI2
+    t2 = time(.1)
+    t3 = time(.5)
+    t4 = time(.2) * PI2
+    t5 = time(.05)
+    t6 = time(.02)
+  }
+
+ function renderLed(index) {
+    h = sin(t1)
+    m = (.3 + triangle(t2) * .2)
+    h1 = (index - ledCount / 2)
+    h2 = triangle(t3) * 10 + 4 * sin(t4)
+    h = h + ((h1 / ledCount * ( h2) % m))
+    s1 = triangle((t5 + index / ledCount * 5) % 1)
+    s1 = s1 * s1
+    s2a = (t6 - (index - ledCount) / ledCount)
+    s2 = triangle((t6 - (index - ledCount) / ledCount) % 1)
+    s = 1 - triangle(s1 * s2)
+    v = (s1 > s2) + .5
+    leds[index] = hsv(h * 255, s * 255, v * 255)
+  }
+}

@@ -1,0 +1,71 @@
+/* halloween color twinkles
+
+   By: PixelBlaze
+
+   Converted by: Andrew Tuline
+
+   Date: Dec, 2021
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+  export function beforeRender(delta) {
+    t1 = time(1.50) * PI2
+    t2 = time(.35) * PI2 // 3.33 times faster than t1
+  }
+
+  export function render(index) {
+
+    h = sin(index / 3 + PI2 * sin(index / 2 + t1))
+    v = wave(index / 3 / PI2 + sin(index / 2 + t2))
+    v = v * v * v * v // Gamma correction
+    v = v > .1 ? v : 0
+    if (h > 0)
+      h = triangle(h) * .1 + .7
+    else
+      h = triangle(h) * .05 + .02
+    hsv(h, 1, v)
+  }
+
+*/
+
+
+program halloween_color_twinkles {
+
+  PI2 = 6.28318
+
+ function renderFrame() {
+    t1 = time(1.50) * PI2
+    t2 = time(.35) * PI2
+  }
+
+  function renderLed(index) {
+
+    ha = sin(index / 2 + t1)
+    h = sin(index / 3 + PI2 * ha )
+    v = wave(index / 3 / PI2 + sin(index / 2 + t2))
+    v = v * v * v * v
+    
+    v = ? v > .1 ? v : 0     // Interim ternary operator.
+    //  v = v > .1 ? v : 0
+
+    if (h > 0) {
+      h = triangle(h) * .1 + .7
+    }
+    else {
+      h = triangle(h) * .05 + .02
+    }
+    leds[index] = hsv(h * 255, 1 * 255, v * 255)
+  }
+}
