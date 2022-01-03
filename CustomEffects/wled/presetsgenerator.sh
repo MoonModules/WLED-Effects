@@ -32,6 +32,8 @@ touch presets.json
 printf '{"0":{}\n' > presets.json
 printf ',"1":{"n":"01 Drip","ql":"01","on":true,"bri":32,"transition":7,"mainseg":0,"seg":[{"id":0,"start":0,"stop":%u,"grp":1,"spc":0,"of":0,"on":true,"bri":255,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":96,"sx":128,"ix":128,"f1x":128,"f2x":128,"f3x":128,"pal":11,"sel":true,"rev":false,"rev2D":false,"mi":false,"rot2D":false},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0},{"stop":0}]}\n' "$ledCount" >> presets.json
 
+counter=2
+
 walk_dir "."
 
 printf '}\n' >> presets.json
