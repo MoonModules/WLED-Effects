@@ -1,9 +1,0 @@
-// default animation, used if segment.name not set
-
-program default
-{
-  function renderFrame() 
-  {
-    leds[counter] = colorFromPalette(counter, counter)
-  }
-}

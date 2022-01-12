@@ -1,5 +1,5 @@
 {
-  "meta": {"version": "0.2.3", "start":"program"},
+  "meta": {"version": "0.3.0", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
@@ -76,8 +76,10 @@
 
   "EXTERNALS":
   {
-    "ledCount": {},
-    "setPixelColor": {"pixelNr":"int", "color":"int"},
+    "ledCount": {"return": "uint16"},
+    "matrixWidth": {"return": "uint8"},
+    "matrixHeight": {"return": "uint8"},
+    "setPixelColor": {"pixelNr":"uint8", "color":"uint8"},
     "leds": {},
     "setPixels": {"leds": "array"},
     "hsv": {"h":"uint8", "s":"uint8", "v":"uint8"},
@@ -113,6 +115,7 @@
     "abs": {"value": "double", "return": "double"},
     "min": {"value1": "double", "value2": "double", "return": "double"},
     "max": {"value1": "double", "value2": "double", "return": "double"},
+    "floor": {"value": "double", "return": "double"},
 
     "hour": {"return":"uint8"},
     "minute": {"return":"uint8"},

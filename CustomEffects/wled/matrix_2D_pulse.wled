@@ -1,0 +1,20 @@
+program matrix_2D_pulse {
+
+PI2 = 6.28318
+
+function renderFrame {
+  t1 = time(.05)*PI2
+  t2 = time(.09)*PI2
+  z = 1+ wave(time(.2))*5
+  t3 = time(.1)
+}
+
+function renderLed(x, y,z) {
+  printf(99,x,y)
+  h = (1 + sin(x / matrixWidth * z + t1) + cos(y / matrixWidth * z + t2)) * .5
+  v = h
+  v = v*v*v
+  leds[x,y]=hsv(h*255,255,v/2*255)
+}
+
+}
