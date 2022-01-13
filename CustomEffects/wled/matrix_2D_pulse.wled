@@ -1,3 +1,49 @@
+
+/* matrix_2D_pulse
+
+   By: PixelBlaze
+
+   Converted by: Ewoud Wijma
+
+   Date: Jan, 2022
+
+   This code was adapted from a shared Pixelblaze pattern. For more information
+   about creating patterns with Pixelblaze and the shared pattern library, see:
+
+   PixelBlaze as found at https://electromage.com/
+
+   PixelBlaze expressions: https://github.com/simap/pixelblaze/blob/master/README.expressions.md
+
+   Getting started guide: https://www.bhencke.com/pixelblazegettingstarted
+
+   Patterns: https://electromage.com/patterns
+
+
+   Original code:
+
+    w = 16 // the width of the 2D matrix
+    zigzag = true //straight or zigzag wiring?
+    export function beforeRender(delta) {
+      t1 = time(.05)*PI2
+      t2 = time(.09)*PI2
+      z = 1+ wave(time(.2))*5
+      t3 = time(.1)
+    }
+
+    export function render(index) {
+      y = floor(index/w)
+      x = index%w
+      if (zigzag) {
+        x = (y % 2 == 0 ? x : w-1-x)
+      }
+      h = (1 + sin(x/w*z + t1) + cos(y/w*z + t2))*.5
+      v = h
+      v = v*v*v
+      hsv(h,1,v/2)
+    }
+*/
+
+
 program matrix_2D_pulse {
 
 PI2 = 6.28318
@@ -10,7 +56,7 @@ function renderFrame {
 }
 
 function renderLed(x, y) {
-  h = (1 + sin(x / matrixWidth * z + t1) + cos(y / matrixWidth * z + t2)) * .5
+  h = (1 + sin(x / matrixWidth * z + t1) + cos(y / matrixHeight * z + t2)) * .5
   v = h
   v = v*v*v
   leds[x,y]=hsv(h*255,255,v/2*255)
