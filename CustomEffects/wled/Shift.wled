@@ -6,7 +6,7 @@ program Shift
 
   function renderFrame() 
   {
-    setPixelColor(0, random())
+    setPixelColor(0, colorFromPalette(random()))
     shift(1)
   }
 

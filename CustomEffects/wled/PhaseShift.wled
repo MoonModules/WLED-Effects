@@ -23,7 +23,7 @@ program PhaseShift
 
   function renderLed(i) 
   {
-    setPixelColor(i, i * pixelCounter)
+    setPixelColor(i, colorFromPalette(i * pixelCounter))
   }
   
 }

@@ -5,7 +5,7 @@ program ColorRandom
 
    function renderLed(i) 
    {
-     setPixelColor(i, random())
+     setPixelColor(i, colorFromPalette(random()))
    }
 
 }

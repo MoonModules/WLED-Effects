@@ -18,7 +18,7 @@ program PerlinMove
       pixloc = map(locn, 50*256, 192*256, 0, ledCount)   // Map that to the length of the strand.
       pixclr = map(clr, 50*256, 192*256, 0, 255)         // Map that to the palette range.
 
-      setPixelColor(pixloc, pixclr)
+      setPixelColor(pixloc, colorFromPalette(pixclr))
     }
   }
 

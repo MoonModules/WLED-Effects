@@ -14,14 +14,14 @@ program Kitt
        goingUp = 1
      }
 
-     setPixelColor(pixelCounter, pixelCounter)
+     setPixelColor(pixelCounter, colorFromPalette(pixelCounter))
      
      if (goingUp) {
-       setPixelColor(pixelCounter - 5, 0)
+       setPixelColor(pixelCounter - 5, colorFromPalette(0))
        pixelCounter += 1
      }
      else {
-       setPixelColor(pixelCounter + 5, 0)
+       setPixelColor(pixelCounter + 5, colorFromPalette(0))
        pixelCounter -= 1
      }
    }

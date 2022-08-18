@@ -1,5 +1,5 @@
 {
-  "meta": {"version": "0.3.0", "start":"program"},
+  "meta": {"version": "0.3.1", "start":"program"},
   "program": ["PROGRAM","ID","block"],
   "block" : ["LCURL",{"*": ["statement"]},"RCURL"],
   "statement" : {"|":["variable","assign","function","call","for", "if","block"]},
@@ -79,10 +79,11 @@
     "ledCount": {"return": "uint16"},
     "matrixWidth": {"return": "uint8"},
     "matrixHeight": {"return": "uint8"},
-    "setPixelColor": {"pixelNr":"uint8", "color":"uint8"},
+    "setPixelColor": {"x":"uint8", "y":"uint8", "color":"uint32"},
     "leds": {},
     "setPixels": {"leds": "array"},
     "hsv": {"h":"uint8", "s":"uint8", "v":"uint8"},
+    "rgbw": {"r":"uint8", "g":"uint8", "b":"uint8", "w":"uint8"},
 
     "setRange": {"from":"uint16", "to":"uint16", "color":"uint32"},
     "fill": {"color":"uint32"},

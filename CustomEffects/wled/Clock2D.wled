@@ -14,9 +14,9 @@ program Clock2D
     }
 
     //set h, m, s dots
-    setPixelColor(circle2D(second * 6), 25)
-    setPixelColor(circle2D(minute * 6), 92)
-    setPixelColor(circle2D(hour * 30 + minute / 2), 160) //add minutes to the hour position
+    setPixelColor(circle2D(second * 6), colorFromPalette(25))
+    setPixelColor(circle2D(minute * 6), colorFromPalette(92))
+    setPixelColor(circle2D(hour * 30 + minute / 2), colorFromPalette(160)) //add minutes to the hour position
   }
 
 }

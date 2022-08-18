@@ -8,9 +8,9 @@ program Clock
     setRange(0,ledCount, 0)         //clear all pixels
 
     //set h, m, s dots
-    setPixelColor(hour, 25)
-    setPixelColor(minute, 125)
-    setPixelColor(second, 225)
+    setPixelColor(hour, colorFromPalette(25))
+    setPixelColor(minute, colorFromPalette(125))
+    setPixelColor(second, colorFromPalette(225))
   }
 
 }
