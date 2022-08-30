@@ -17,11 +17,11 @@ program Kitt
      setPixelColor(pixelCounter, colorFromPalette(pixelCounter))
      
      if (goingUp) {
-       setPixelColor(pixelCounter - 5, colorFromPalette(0))
+       setPixelColor(pixelCounter - 5, 0) //black
        pixelCounter += 1
      }
      else {
-       setPixelColor(pixelCounter + 5, colorFromPalette(0))
+       setPixelColor(pixelCounter + 5, 0) //black
        pixelCounter -= 1
      }
    }
