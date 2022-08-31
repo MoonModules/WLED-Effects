@@ -1,0 +1,14 @@
+program Smiley
+{
+  function renderFrame()
+  {
+    fadeToBlackBy(10)
+    eyeColor = rgbw(255,0,0,0)
+    faceColor = rgbw(255,255,0,0)
+    drawArc(width/2,height/2,width* 0.4, eyeColor, faceColor) //face
+    drawLine(width*.35, height*.32, width*.45, height*.32, eyeColor) //left eye
+    drawLine(width*.55, height*.32, width*.65, height*.32, eyeColor) //right eye
+    drawLine(width*.50, height*.45, width*.50, height*.55, eyeColor) //nose
+    drawLine(width*.35, height*.68, width*.65, height*.68, eyeColor) //mouth
+  }
+}

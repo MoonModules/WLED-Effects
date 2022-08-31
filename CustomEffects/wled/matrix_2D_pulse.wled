@@ -56,7 +56,7 @@ function renderFrame {
 }
 
 function renderLed(x, y) {
-  h = (1 + sin(x / matrixWidth * z + t1) + cos(y / matrixHeight * z + t2)) * .5
+  h = (1 + sin(x / width * z + t1) + cos(y / height * z + t2)) * .5
   v = h
   v = v*v*v
   leds[x,y]=hsv(h*255,255,v/2*255)
