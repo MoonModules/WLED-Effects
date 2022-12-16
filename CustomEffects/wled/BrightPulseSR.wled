@@ -1,4 +1,4 @@
-// fill all leds based on sampleAvg value
+// fill all leds based on volume value (was sampleAvg)
 // idea by @tony
 
 program BrightPulse
@@ -6,7 +6,7 @@ program BrightPulse
 
   function renderFrame() 
   {
-    lum = constrain(sampleAvg * 256 / (256 - speedSlider), 0, 255)
+    lum = constrain(volume * 256 / (256 - speedSlider), 0, 255)
     fill(colorBlend(segcolor(1), segcolor(0), lum))
   }
 

@@ -1,0 +1,9 @@
+program fftBrightness
+{
+
+   function renderLed(i) 
+   {
+     setPixelColor(i, colorFromPalette(i, fftResult(i)))
+   }
+
+}
