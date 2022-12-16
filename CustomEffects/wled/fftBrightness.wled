@@ -1,9 +1,22 @@
+/*
+  Showcase of FFT frequency reactive effect.
+  Shows 16 pixels (repeatedly if more then 16 leds)
+  Function renderLed is called for each pixel in the segment
+  Each pixel is a frequency band and the height of the band determines the brightness of this pixel
+
+  colorFromPalette parameter is %256, as we have 16 bands, we need 16 colors from the palette (*16)
+  fftResult band parameter is %16
+  fftResult is 1..256 and is second paramater of colorFromPalette (brightness)
+
+  (c) ewowi
+*/
+
 program fftBrightness
 {
 
    function renderLed(i) 
    {
-     setPixelColor(i, colorFromPalette(i, fftResult(i)))
+     setPixelColor(i, colorFromPalette(i*16, fftResult(i)))
    }
 
 }
