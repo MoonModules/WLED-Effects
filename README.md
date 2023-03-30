@@ -1,11 +1,11 @@
 WLED-Effects
 
-Store presets, api commands, playlists and custom effects for WLED AC and WLED Soundreactive
+Store presets, api commands, playlists and ARTI-FX for WLED AC and WLED Soundreactive
 
 Currently 2 folders
 
 * Presets and API commands
-* Custom effects (Currently WLED SR only, see https://github.com/atuline/WLED/wiki/WLED-Custom-effects)
+* ARTI-FX (WLED SR and MM, see https://mm.kno.wled.ge/moonmodules/arti-fx/)
 
 Filename conventions
 * date created as yyyymmdd
