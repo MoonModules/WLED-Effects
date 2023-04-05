@@ -131,7 +131,9 @@
     "square": "",
     "clamp": "",
 
-    "printf": ""
+    "print": "",
+    "jsonToPixels":"",
+    "frameTime":""
   }
 
 }

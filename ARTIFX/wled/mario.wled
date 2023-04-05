@@ -1,0 +1,17 @@
+// show 4 json images
+// name of json = <segment.name><lastFrame>.json>
+// jsons to be uploaded to <ip>/edit
+// jsons in pixelart format
+
+program Mario
+{
+  lastFrame = 0
+
+  function renderFrame() 
+  {
+    jsonToPixels(lastFrame%4+1)
+    lastFrame += 1 //next frame
+    frameTime = 2000 //every 2 seconds
+  }
+
+}
