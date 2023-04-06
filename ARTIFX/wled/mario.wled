@@ -2,6 +2,7 @@
 // name of json = <segment.name><lastFrame>.json>
 // jsons to be uploaded to <ip>/edit
 // jsons in pixelart format
+// idea by @Stiw47
 
 program Mario
 {
@@ -11,7 +12,7 @@ program Mario
   {
     jsonToPixels(lastFrame%4+1)
     lastFrame += 1 //next frame
-    frameTime = 2000 //every 2 seconds
+    frameTime = 1400 - speedSlider * 5 //use speedSlider to change speed
   }
 
 }
