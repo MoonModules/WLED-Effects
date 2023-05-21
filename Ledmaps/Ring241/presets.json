@@ -1,0 +1,20 @@
+{
+    "11":{"n":"◯35 Sinelon","mainseg":0,"seg":[{"id":0,"n":"Ring35","fx":92}],"ledmap":10},
+    "12":{"n":"◯241 2D34 Sinelon","mainseg":0,"seg":[{"id":0,"n":"Ring241 2D34","fx":92}],"ledmap":10},
+    "13":{"n":"◯241 2D33 Sinelon","mainseg":0,"seg":[{"id":0,"n":"Ring241 2D33","fx":92}],"ledmap":10},
+    "14":{"n":"◯241 squeeze Sinelon","mainseg":0,"seg":[{"id":0,"n":"Ring241 squeeze","fx":92}],"ledmap":10},
+    "15":{"n":"◯241 circles Sinelon","mainseg":0,"seg":[{"id":0,"n":"Ring241 circles","fx":92}],"ledmap":10},
+    "16":{"n":"◯241 pie Sinelon","mainseg":0,"seg":[{"id":0,"n":"Ring241 pie","fx":92}],"ledmap":10},
+        
+    "21":{"n":"◯241 2D34 GEQ","mainseg":0,"seg":[{"id":0,"n":"Ring241 2D34","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "22":{"n":"◯241 2D33 GEQ","mainseg":0,"seg":[{"id":0,"n":"Ring241 2D33","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "23":{"n":"◯241 squeeze GEQ","mainseg":0,"seg":[{"id":0,"n":"Ring241 squeeze","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "24":{"n":"◯241 circles GEQ","mainseg":0,"seg":[{"id":0,"n":"Ring241 circles","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "25":{"n":"◯241 pie GEQ","mainseg":0,"seg":[{"id":0,"n":"Ring241 pie","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+
+    "31":{"n":"◯241 2D34 Waverly","mainseg":0,"seg":[{"id":0,"n":"Ring241 2D34","fx":165}],"ledmap":10},
+    "32":{"n":"◯241 2D33 Waverly","mainseg":0,"seg":[{"id":0,"n":"Ring241 2D33","fx":165}],"ledmap":10},
+    "33":{"n":"◯241 squeeze Waverly","mainseg":0,"seg":[{"id":0,"n":"Ring241 squeeze","fx":165}],"ledmap":10},
+    "34":{"n":"◯241 circles Waverly","mainseg":0,"seg":[{"id":0,"n":"Ring241 circles","fx":165}],"ledmap":10},
+    "35":{"n":"◯241 pie Waverly","mainseg":0,"seg":[{"id":0,"n":"Ring241 pie","fx":165}],"ledmap":10}
+}

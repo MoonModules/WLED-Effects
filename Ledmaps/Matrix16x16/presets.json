@@ -1,0 +1,4 @@
+{
+    "81":{"n":"▢16x16 Sinelon","mainseg":0,"seg":[{"id":0,"n":"Square16x16","fx":92}],"ledmap":10},
+    "82":{"n":"▢16x16 v2 Sinelon","mainseg":0,"seg":[{"id":0,"n":"Square16x16 v2","fx":92}],"ledmap":10}
+}

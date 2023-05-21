@@ -1,0 +1,22 @@
+{
+    "42":{"n":"🧊885 wrap Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube885 wrap","fx":165}],"ledmap":10},
+    "43":{"n":"🧊886 wrap Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube886 wrap","fx":165}],"ledmap":10},
+    "44":{"n":"🧊886 delta Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube886 delta","fx":165}],"ledmap":10},
+    "45":{"n":"🧊885ew wrap Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube885ew wrap","fx":165}],"ledmap":10},
+    "46":{"n":"🧊886ew wrap Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube886ew wrap","fx":165}],"ledmap":10},
+    "47":{"n":"🧊886ew delta Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube886ew delta","fx":165}],"ledmap":10},
+
+    "52":{"n":"🧊885 wrap Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube885 wrap","fx":124}],"ledmap":10},
+    "53":{"n":"🧊886 wrap Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube886 wrap","fx":124}],"ledmap":10},
+    "54":{"n":"🧊886 delta Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube886 delta","fx":124}],"ledmap":10},
+    "55":{"n":"🧊885ew wrap Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube885ew wrap","fx":124}],"ledmap":10},
+    "56":{"n":"🧊886ew wrap Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube886ew wrap","fx":124}],"ledmap":10},
+    "57":{"n":"🧊886ew delta Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube886ew delta","fx":124}],"ledmap":10},
+
+    "62":{"n":"🧊885 wrap GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube885 wrap","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "63":{"n":"🧊886 wrap GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube886 wrap","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "64":{"n":"🧊886 delta GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube886 delta","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "65":{"n":"🧊885ew wrap GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube885ew wrap","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "66":{"n":"🧊886ew wrap GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube886ew wrap","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10},
+    "67":{"n":"🧊886ew delta GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube886ew delta","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10}
+}

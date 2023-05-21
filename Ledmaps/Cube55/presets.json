@@ -1,0 +1,7 @@
+{
+    "41":{"n":"🧊556 Waverly","mainseg":0,"seg":[{"id":0,"n":"Cube556","fx":165}],"ledmap":10},
+
+    "51":{"n":"🧊556 Distortion Waves","mainseg":0,"seg":[{"id":0,"n":"Cube556","fx":124}],"ledmap":10},
+
+    "61":{"n":"🧊556 GEQ","mainseg":0,"seg":[{"id":0,"n":"Cube556","fx":139,"col":[[255,160,0],[0,0,0],[255,224,160]],"sx":255,"ix":254,"c1":255,"o2":true,"pal":11}],"ledmap":10}
+}
