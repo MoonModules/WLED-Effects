@@ -3,7 +3,7 @@
       1,
       0
     ],
-    "vid": 2305291,
+    "vid": 2311110,
     "id": {
       "mdns": "wled-humancube",
       "name": "WLED-HUMANCUBE",
@@ -12,7 +12,7 @@
     "nw": {
       "ins": [
         {
-          "ssid": "Tarna",
+          "ssid": "ewtr",
           "pskl": 9,
           "ip": [
             0,
@@ -54,8 +54,8 @@
     "hw": {
       "led": {
         "total": 2000,
-        "maxpwr": 1500,
-        "ledma": 0,
+        "maxpwr": 10000,
+        "ledma": 55,
         "cct": false,
         "cr": false,
         "cb": 0,
@@ -71,6 +71,10 @@
           "pr": false,
           "pv": false,
           "ps": false,
+          "pbl": false,
+          "prl": false,
+          "pvl": false,
+          "psl": false,
           "panels": [
             {
               "b": false,
@@ -89,27 +93,29 @@
             "start": 0,
             "len": 400,
             "pin": [
-              12
+              16
             ],
             "order": 1,
             "rev": false,
             "skip": 0,
             "type": 22,
             "ref": true,
-            "rgbwm": 0
+            "rgbwm": 0,
+            "freq": 0
           },
           {
             "start": 400,
             "len": 400,
             "pin": [
-              13
+              3
             ],
             "order": 1,
             "rev": false,
             "skip": 0,
             "type": 22,
             "ref": true,
-            "rgbwm": 0
+            "rgbwm": 0,
+            "freq": 0
           },
           {
             "start": 800,
@@ -122,7 +128,8 @@
             "skip": 0,
             "type": 22,
             "ref": true,
-            "rgbwm": 0
+            "rgbwm": 0,
+            "freq": 0
           },
           {
             "start": 1200,
@@ -135,20 +142,22 @@
             "skip": 0,
             "type": 22,
             "ref": true,
-            "rgbwm": 0
+            "rgbwm": 0,
+            "freq": 0
           },
           {
             "start": 1600,
             "len": 400,
             "pin": [
-              27
+              32
             ],
             "order": 1,
             "rev": false,
             "skip": 0,
             "type": 22,
             "ref": true,
-            "rgbwm": 0
+            "rgbwm": 0,
+            "freq": 0
           }
         ]
       },
@@ -211,14 +220,14 @@
         "sel": true
       },
       "relay": {
-        "pin": -1,
+        "pin": 19,
         "rev": false
       },
       "baud": 1152,
       "if": {
         "i2c-pin": [
-          -1,
-          -1
+          21,
+          22
         ],
         "spi-pin": [
           -1,
@@ -234,6 +243,7 @@
       "gc": {
         "bri": 1,
         "col": 2.8,
+        "prev": 1,
         "val": 2.8
       },
       "tr": {
@@ -250,7 +260,7 @@
       }
     },
     "def": {
-      "ps": 0,
+      "ps": 11,
       "on": true,
       "bri": 255
     },
@@ -326,6 +336,10 @@
         "lt": 0
       }
     },
+    "remote": {
+      "remote_enabled": false,
+      "linked_remote": ""
+    },
     "ol": {
       "clock": 0,
       "cntdwn": false,
@@ -356,11 +370,32 @@
       "aota": true
     },
     "um": {
-      "Autosave": {
-        "enabled": false,
-        "autoSaveAfterSec": 15,
-        "autoSavePreset": 250,
-        "autoSaveApplyOnBoot": false
+      "Temperature": {
+        "enabled": true,
+        "pin": 18,
+        "degC": true,
+        "read-interval-s": 60,
+        "parasite-pwr": false,
+        "parasite-pwr-pin": -1
+      },
+      "4LineDisplay": {
+        "enabled": true,
+        "pin": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "type": 1,
+        "flip": false,
+        "contrast": 10,
+        "contrastFix": false,
+        "screenTimeOutSec": 60,
+        "sleepMode": false,
+        "clockMode": false,
+        "showSeconds": true,
+        "i2c-freq-kHz": 400
       },
       "AudioReactive": {
         "enabled": true,
@@ -388,14 +423,14 @@
           "freqDist": 0,
           "freqRMS": 1
         },
+        "frequency": {
+          "scale": 3,
+          "profile": 1
+        },
         "dynamics": {
           "limiter": true,
           "rise": 50,
           "fall": 200
-        },
-        "frequency": {
-          "scale": 3,
-          "profile": 1
         },
         "sync": {
           "port": 11988,
