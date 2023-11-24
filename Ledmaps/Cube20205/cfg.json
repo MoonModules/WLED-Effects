@@ -1,441 +1,440 @@
 {
-    "rev": [
-      1,
-      0
-    ],
-    "vid": 2311110,
-    "id": {
-      "mdns": "wled-humancube",
-      "name": "WLED-HUMANCUBE",
-      "inv": "Light"
-    },
-    "nw": {
-      "ins": [
-        {
-          "ssid": "ewtr",
-          "pskl": 9,
-          "ip": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "gw": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "sn": [
-            255,
-            255,
-            255,
-            0
-          ]
-        }
-      ]
-    },
-    "ap": {
-      "ssid": "WLED-HUMANCUBE",
-      "pskl": 8,
-      "chan": 1,
-      "hide": 0,
-      "behav": 2,
-      "ip": [
-        4,
-        3,
-        2,
-        1
-      ]
-    },
-    "wifi": {
-      "sleep": false
-    },
-    "hw": {
-      "led": {
-        "total": 2000,
-        "maxpwr": 10000,
-        "ledma": 55,
-        "cct": false,
-        "cr": false,
-        "cb": 0,
-        "fps": 250,
-        "rgbwm": 255,
-        "ld": true,
-        "matrix": {
-          "mpc": 1,
-          "ba": false,
-          "mph": 1,
-          "mpv": 1,
-          "pb": false,
-          "pr": false,
-          "pv": false,
-          "ps": false,
-          "pbl": false,
-          "prl": false,
-          "pvl": false,
-          "psl": false,
-          "panels": [
-            {
-              "b": false,
-              "r": false,
-              "v": true,
-              "s": false,
-              "x": 0,
-              "y": 0,
-              "h": 20,
-              "w": 100
-            }
-          ]
-        },
-        "ins": [
-          {
-            "start": 0,
-            "len": 400,
-            "pin": [
-              16
-            ],
-            "order": 1,
-            "rev": false,
-            "skip": 0,
-            "type": 22,
-            "ref": true,
-            "rgbwm": 0,
-            "freq": 0
-          },
-          {
-            "start": 400,
-            "len": 400,
-            "pin": [
-              3
-            ],
-            "order": 1,
-            "rev": false,
-            "skip": 0,
-            "type": 22,
-            "ref": true,
-            "rgbwm": 0,
-            "freq": 0
-          },
-          {
-            "start": 800,
-            "len": 400,
-            "pin": [
-              14
-            ],
-            "order": 1,
-            "rev": false,
-            "skip": 0,
-            "type": 22,
-            "ref": true,
-            "rgbwm": 0,
-            "freq": 0
-          },
-          {
-            "start": 1200,
-            "len": 400,
-            "pin": [
-              15
-            ],
-            "order": 1,
-            "rev": false,
-            "skip": 0,
-            "type": 22,
-            "ref": true,
-            "rgbwm": 0,
-            "freq": 0
-          },
-          {
-            "start": 1600,
-            "len": 400,
-            "pin": [
-              32
-            ],
-            "order": 1,
-            "rev": false,
-            "skip": 0,
-            "type": 22,
-            "ref": true,
-            "rgbwm": 0,
-            "freq": 0
-          }
-        ]
-      },
-      "com": [],
-      "btn": {
-        "max": 4,
-        "pull": true,
-        "ins": [
-          {
-            "type": 2,
-            "pin": [
-              0
-            ],
-            "macros": [
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "type": 0,
-            "pin": [
-              -1
-            ],
-            "macros": [
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "type": 0,
-            "pin": [
-              -1
-            ],
-            "macros": [
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "type": 0,
-            "pin": [
-              -1
-            ],
-            "macros": [
-              0,
-              0,
-              0
-            ]
-          }
-        ],
-        "tt": 32,
-        "mqtt": false
-      },
-      "ir": {
-        "pin": -1,
-        "type": 0,
-        "sel": true
-      },
-      "relay": {
-        "pin": 19,
-        "rev": false
-      },
-      "baud": 1152,
-      "if": {
-        "i2c-pin": [
-          21,
-          22
-        ],
-        "spi-pin": [
-          -1,
-          -1,
-          -1
-        ]
-      }
-    },
-    "light": {
-      "scale-bri": 100,
-      "pal-mode": 0,
-      "aseg": false,
-      "gc": {
-        "bri": 1,
-        "col": 2.8,
-        "prev": 1,
-        "val": 2.8
-      },
-      "tr": {
-        "mode": true,
-        "dur": 7,
-        "pal": 0,
-        "rpc": 5
-      },
-      "nl": {
-        "mode": 1,
-        "dur": 60,
-        "tbri": 0,
-        "macro": 0
-      }
-    },
-    "def": {
-      "ps": 11,
-      "on": true,
-      "bri": 255
-    },
-    "if": {
-      "sync": {
-        "port0": 21324,
-        "port1": 65506,
-        "recv": {
-          "bri": false,
-          "col": false,
-          "fx": false,
-          "grp": 0,
-          "seg": false,
-          "sb": false
-        },
-        "send": {
-          "dir": false,
-          "btn": false,
-          "va": false,
-          "hue": false,
-          "macro": false,
-          "grp": 0,
-          "ret": 0
-        }
-      },
-      "nodes": {
-        "list": true,
-        "bcast": true
-      },
-      "live": {
-        "en": false,
-        "mso": false,
-        "port": 5568,
-        "mc": false,
-        "dmx": {
-          "uni": 1,
-          "seqskip": false,
-          "e131prio": 0,
-          "addr": 1,
-          "dss": 0,
-          "mode": 4
-        },
-        "timeout": 25,
-        "maxbri": false,
-        "no-gc": true,
-        "offset": 0
-      },
-      "va": {
-        "alexa": false,
-        "macros": [
-          0,
-          0
-        ],
-        "p": 0
-      },
-      "ndb": {
+  "rev": [
+    1,
+    0
+  ],
+  "vid": 2311231,
+  "id": {
+    "mdns": "wled-humancube",
+    "name": "WLED-HUMANCUBE",
+    "inv": "Light"
+  },
+  "nw": {
+    "ins": [
+      {
+        "ssid": "ewtr",
+        "pskl": 9,
         "ip": [
           0,
           0,
           0,
           0
         ],
-        "port": 1768,
-        "enabled": false
-      },
-      "ntp": {
-        "en": false,
-        "host": "0.wled.pool.ntp.org",
-        "tz": 0,
-        "offset": 0,
-        "ampm": false,
-        "ln": 0,
-        "lt": 0
-      }
-    },
-    "remote": {
-      "remote_enabled": false,
-      "linked_remote": ""
-    },
-    "ol": {
-      "clock": 0,
-      "cntdwn": false,
-      "min": 0,
-      "max": 143,
-      "o12pix": 0,
-      "o5m": false,
-      "osec": false
-    },
-    "timers": {
-      "cntdwn": {
-        "goal": [
-          20,
-          1,
-          1,
+        "gw": [
+          0,
           0,
           0,
           0
         ],
-        "macro": 0
+        "sn": [
+          255,
+          255,
+          255,
+          0
+        ]
+      }
+    ]
+  },
+  "ap": {
+    "ssid": "WLED-HUMANCUBE",
+    "pskl": 8,
+    "chan": 1,
+    "hide": 0,
+    "behav": 2,
+    "ip": [
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  "wifi": {
+    "sleep": false
+  },
+  "hw": {
+    "led": {
+      "total": 2000,
+      "maxpwr": 10000,
+      "ledma": 55,
+      "cct": false,
+      "cr": false,
+      "cb": 0,
+      "fps": 60,
+      "rgbwm": 255,
+      "ld": false,
+      "matrix": {
+        "mpc": 5,
+        "ba": true,
+        "mph": 5,
+        "mpv": 1,
+        "pb": false,
+        "pr": false,
+        "pv": false,
+        "ps": false,
+        "pbl": false,
+        "prl": false,
+        "pvl": true,
+        "psl": false,
+        "panels": [
+          {
+            "b": false,
+            "r": true,
+            "v": true,
+            "s": false,
+            "x": 0,
+            "y": 0,
+            "h": 20,
+            "w": 20
+          },
+          {
+            "b": false,
+            "r": true,
+            "v": true,
+            "s": false,
+            "x": 20,
+            "y": 0,
+            "h": 20,
+            "w": 20
+          },
+          {
+            "b": false,
+            "r": false,
+            "v": true,
+            "s": false,
+            "x": 40,
+            "y": 0,
+            "h": 20,
+            "w": 20
+          },
+          {
+            "b": false,
+            "r": false,
+            "v": true,
+            "s": false,
+            "x": 60,
+            "y": 0,
+            "h": 20,
+            "w": 20
+          },
+          {
+            "b": false,
+            "r": false,
+            "v": true,
+            "s": false,
+            "x": 80,
+            "y": 0,
+            "h": 20,
+            "w": 20
+          }
+        ]
       },
-      "ins": []
+      "ins": [
+        {
+          "start": 0,
+          "len": 400,
+          "pin": [
+            16
+          ],
+          "order": 1,
+          "rev": false,
+          "skip": 0,
+          "type": 22,
+          "ref": true,
+          "rgbwm": 0,
+          "freq": 0
+        },
+        {
+          "start": 400,
+          "len": 400,
+          "pin": [
+            14
+          ],
+          "order": 1,
+          "rev": false,
+          "skip": 0,
+          "type": 22,
+          "ref": true,
+          "rgbwm": 0,
+          "freq": 0
+        },
+        {
+          "start": 800,
+          "len": 400,
+          "pin": [
+            32
+          ],
+          "order": 1,
+          "rev": false,
+          "skip": 0,
+          "type": 22,
+          "ref": true,
+          "rgbwm": 0,
+          "freq": 0
+        },
+        {
+          "start": 1200,
+          "len": 400,
+          "pin": [
+            3
+          ],
+          "order": 1,
+          "rev": false,
+          "skip": 0,
+          "type": 22,
+          "ref": true,
+          "rgbwm": 0,
+          "freq": 0
+        },
+        {
+          "start": 1600,
+          "len": 400,
+          "pin": [
+            15
+          ],
+          "order": 1,
+          "rev": false,
+          "skip": 0,
+          "type": 22,
+          "ref": true,
+          "rgbwm": 0,
+          "freq": 0
+        }
+      ]
     },
-    "ota": {
-      "lock": false,
-      "lock-wifi": false,
-      "pskl": 7,
-      "aota": true
+    "com": [],
+    "btn": {
+      "max": 4,
+      "pull": true,
+      "ins": [
+        {
+          "type": 2,
+          "pin": [
+            0
+          ],
+          "macros": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": 0,
+          "pin": [
+            -1
+          ],
+          "macros": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": 0,
+          "pin": [
+            -1
+          ],
+          "macros": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": 0,
+          "pin": [
+            -1
+          ],
+          "macros": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "tt": 32,
+      "mqtt": false
     },
-    "um": {
-      "Temperature": {
-        "enabled": true,
-        "pin": 18,
-        "degC": true,
-        "read-interval-s": 60,
-        "parasite-pwr": false,
-        "parasite-pwr-pin": -1
+    "ir": {
+      "pin": -1,
+      "type": 0,
+      "sel": true
+    },
+    "relay": {
+      "pin": 19,
+      "rev": false
+    },
+    "baud": 1152,
+    "if": {
+      "i2c-pin": [
+        21,
+        22
+      ],
+      "spi-pin": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  },
+  "light": {
+    "scale-bri": 100,
+    "pal-mode": 0,
+    "aseg": false,
+    "gc": {
+      "bri": 1,
+      "col": 2.8,
+      "prev": 1,
+      "val": 2.8
+    },
+    "tr": {
+      "mode": true,
+      "dur": 7,
+      "pal": 0,
+      "rpc": 5
+    },
+    "nl": {
+      "mode": 1,
+      "dur": 60,
+      "tbri": 0,
+      "macro": 0
+    }
+  },
+  "def": {
+    "ps": 11,
+    "on": true,
+    "bri": 255
+  },
+  "if": {
+    "sync": {
+      "port0": 21324,
+      "port1": 65506,
+      "recv": {
+        "bri": true,
+        "col": true,
+        "fx": true,
+        "grp": 128,
+        "seg": true,
+        "sb": false
       },
-      "4LineDisplay": {
-        "enabled": true,
+      "send": {
+        "dir": false,
+        "btn": false,
+        "va": false,
+        "hue": false,
+        "macro": false,
+        "grp": 128,
+        "ret": 0
+      }
+    },
+    "nodes": {
+      "list": true,
+      "bcast": true
+    },
+    "live": {
+      "en": false,
+      "mso": false,
+      "port": 5568,
+      "mc": false,
+      "dmx": {
+        "uni": 1,
+        "seqskip": false,
+        "e131prio": 0,
+        "addr": 1,
+        "dss": 0,
+        "mode": 4
+      },
+      "timeout": 25,
+      "maxbri": false,
+      "no-gc": true,
+      "offset": 0
+    },
+    "va": {
+      "alexa": false,
+      "macros": [
+        0,
+        0
+      ],
+      "p": 0
+    },
+    "ntp": {
+      "en": false,
+      "host": "0.wled.pool.ntp.org",
+      "tz": 0,
+      "offset": 0,
+      "ampm": false,
+      "ln": 0,
+      "lt": 0
+    }
+  },
+  "ol": {
+    "clock": 0,
+    "cntdwn": false,
+    "min": 0,
+    "max": 143,
+    "o12pix": 0,
+    "o5m": false,
+    "osec": false
+  },
+  "timers": {
+    "cntdwn": {
+      "goal": [
+        20,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "macro": 0
+    },
+    "ins": []
+  },
+  "ota": {
+    "lock": false,
+    "lock-wifi": false,
+    "pskl": 7,
+    "aota": true
+  },
+  "um": {
+    "AudioReactive": {
+      "enabled": true,
+      "analogmic": {
+        "pin": -1
+      },
+      "digitalmic": {
+        "type": 1,
         "pin": [
           -1,
           -1,
           -1,
           -1,
+          -1,
           -1
-        ],
-        "type": 1,
-        "flip": false,
-        "contrast": 10,
-        "contrastFix": false,
-        "screenTimeOutSec": 60,
-        "sleepMode": false,
-        "clockMode": false,
-        "showSeconds": true,
-        "i2c-freq-kHz": 400
+        ]
       },
-      "AudioReactive": {
-        "enabled": true,
-        "analogmic": {
-          "pin": -1
-        },
-        "digitalmic": {
-          "type": 1,
-          "pin": [
-            -1,
-            -1,
-            -1,
-            -1,
-            -1,
-            -1
-          ]
-        },
-        "config": {
-          "squelch": 1,
-          "gain": 10,
-          "AGC": 1
-        },
-        "experiments": {
-          "micLev": 2,
-          "freqDist": 0,
-          "freqRMS": 1
-        },
-        "frequency": {
-          "scale": 3,
-          "profile": 1
-        },
-        "dynamics": {
-          "limiter": true,
-          "rise": 50,
-          "fall": 200
-        },
-        "sync": {
-          "port": 11988,
-          "mode": 2
-        }
+      "config": {
+        "squelch": 1,
+        "gain": 10,
+        "AGC": 1
+      },
+      "experiments": {
+        "micLev": 2,
+        "freqDist": 0,
+        "freqRMS": 1
+      },
+      "frequency": {
+        "scale": 3,
+        "profile": 1
+      },
+      "dynamics": {
+        "limiter": true,
+        "rise": 50,
+        "fall": 200
+      },
+      "sync": {
+        "port": 11988,
+        "mode": 2
       }
     }
   }
+}

@@ -1,12 +1,1210 @@
-{"0":{}
-,"7":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":137,"sx":255,"ix":255,"pal":73,"c1":0,"c2":0,"c3":10,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":1,"n":"Freqwave"}
-,"250":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":140,"sx":128,"ix":128,"pal":0,"c1":8,"c2":48,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":2}],"ledmap":2,"n":"~ 05-15 21:33:55 ~"}
-,"2":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":180,"sx":38,"ix":38,"pal":11,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":2,"n":"Hiphotic Rainbow"}
-,"3":{"playlist":{"ps":[9,2,7,8,5,6,4,1],"dur":[300,600,300,300,300,300,600,300],"transition":[10,10,10,10,10,10,10,10],"repeat":-1,"end":0,"r":1},"on":true,"n":"Startup"}
-,"1":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":140,"sx":255,"ix":255,"pal":73,"c1":8,"c2":48,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":1,"n":"Waterfall"}
-,"4":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":180,"sx":38,"ix":38,"pal":35,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":2,"n":"Hiphotic Fire"}
-,"6":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":131,"sx":255,"ix":255,"pal":73,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":true,"o2":false,"o3":false,"si":1,"m12":1}],"ledmap":1,"n":"Matripix Ramp"}
-,"5":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":129,"sx":255,"ix":64,"pal":61,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":1,"n":"Pixelwave Candy"}
-,"8":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":159,"sx":255,"ix":128,"pal":0,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":1,"n":"DJ Light"}
-,"9":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":159,"sx":255,"ix":128,"pal":0,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":true,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":1,"n":"DJ Light Candy"},"10":{"mainseg":0,"seg":[{"id":0,"grp":1,"spc":0,"of":0,"on":true,"frz":false,"bri":255,"cct":127,"col":[[255,160,0],[0,0,0],[0,0,0]],"fx":180,"sx":38,"ix":38,"pal":54,"c1":128,"c2":128,"c3":16,"sel":true,"rev":false,"mi":false,"rY":false,"mY":false,"tp":false,"o1":false,"o2":false,"o3":false,"si":0,"m12":1}],"ledmap":2,"n":"Hiphotic Temperature"}
-}
+{
+    "0": {},
+    "1": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 140,
+          "sx": 255,
+          "ix": 255,
+          "pal": 73,
+          "c1": 8,
+          "c2": 48,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Waterfall ♫"
+    },
+    "2": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 180,
+          "sx": 38,
+          "ix": 38,
+          "pal": 11,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 2,
+      "n": "Hiphotic Rainbow"
+    },
+    "3": {
+      "playlist": {
+        "ps": [
+          9,
+          2,
+          7,
+          8,
+          5,
+          6,
+          4,
+          1
+        ],
+        "dur": [
+          300,
+          600,
+          300,
+          300,
+          300,
+          300,
+          600,
+          300
+        ],
+        "transition": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "repeat": -1,
+        "end": 0,
+        "r": 1
+      },
+      "on": true,
+      "n": "Startup"
+    },
+    "4": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 180,
+          "sx": 38,
+          "ix": 38,
+          "pal": 35,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 2,
+      "n": "Hiphotic Fire"
+    },
+    "5": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 129,
+          "sx": 255,
+          "ix": 64,
+          "pal": 61,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Pixelwave Candy ♪"
+    },
+    "6": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 131,
+          "sx": 255,
+          "ix": 255,
+          "pal": 73,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": true,
+          "o2": false,
+          "o3": false,
+          "si": 1,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Matripix Ramp ♪"
+    },
+    "7": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 137,
+          "sx": 255,
+          "ix": 255,
+          "pal": 73,
+          "c1": 0,
+          "c2": 0,
+          "c3": 10,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Freqwave ♫"
+    },
+    "8": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 159,
+          "sx": 255,
+          "ix": 128,
+          "pal": 0,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "DJ Light ♫"
+    },
+    "9": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 159,
+          "sx": 255,
+          "ix": 128,
+          "pal": 0,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": true,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "DJ Light Candy ♫"
+    },
+    "10": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 180,
+          "sx": 38,
+          "ix": 38,
+          "pal": 54,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 2,
+      "n": "Hiphotic Temperature"
+    },
+    "11": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 152,
+          "sx": 128,
+          "ix": 128,
+          "pal": 0,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 0
+        }
+      ],
+      "ledmap": 0,
+      "n": "DNA"
+    },
+    "12": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 139,
+          "sx": 128,
+          "ix": 128,
+          "pal": 11,
+          "c1": 255,
+          "c2": 64,
+          "c3": 16,
+          "sel": true,
+          "rev": true,
+          "mi": true,
+          "rY": true,
+          "mY": true,
+          "tp": true,
+          "o1": false,
+          "o2": true,
+          "o3": false,
+          "si": 0,
+          "m12": 0
+        }
+      ],
+      "ledmap": 1,
+      "n": "GEQ ♫"
+    },
+    "13": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              160,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 148,
+          "sx": 128,
+          "ix": 128,
+          "pal": 6,
+          "c1": 8,
+          "c2": 48,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 0
+        }
+      ],
+      "ledmap": 1,
+      "n": "Ripple Peak ♪"
+    },
+    "14": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 157,
+          "sx": 0,
+          "ix": 128,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 5
+        }
+      ],
+      "ledmap": 2,
+      "n": "Gravcentric 🎨⋮♪"
+    },
+    "15": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 156,
+          "sx": 128,
+          "ix": 128,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 5
+        }
+      ],
+      "ledmap": 2,
+      "n": "Gravcenter 🎨⋮♪"
+    },
+    "16": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 91,
+          "sx": 49,
+          "ix": 128,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Bouncing Balls 🎨⋮⋮"
+    },
+    "17": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 44,
+          "sx": 0,
+          "ix": 0,
+          "pal": 11,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Tetrix 🎨⋮⋮"
+    },
+    "18": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              133,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 111,
+          "sx": 128,
+          "ix": 128,
+          "pal": 11,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 0
+        }
+      ],
+      "ledmap": 1,
+      "n": "Chunchun 🎨⋮"
+    },
+    "19": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 153,
+          "sx": 126,
+          "ix": 255,
+          "pal": 11,
+          "c1": 183,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Matrix ▦"
+    },
+    "20": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 96,
+          "sx": 5,
+          "ix": 215,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Drip 🎨⋮⋮"
+    },
+    "21": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              54,
+              67,
+              255
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 130,
+          "sx": 128,
+          "ix": 128,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 0
+        }
+      ],
+      "ledmap": 1,
+      "n": "Juggles 🎨⋮♪"
+    },
+    "22": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              133,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 134,
+          "sx": 128,
+          "ix": 128,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 0
+        }
+      ],
+      "ledmap": 1,
+      "n": "Puddles 🎨⋮♪"
+    },
+    "23": {
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "grp": 1,
+          "spc": 0,
+          "of": 0,
+          "on": true,
+          "frz": false,
+          "bri": 255,
+          "cct": 127,
+          "set": 0,
+          "col": [
+            [
+              255,
+              133,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "fx": 175,
+          "sx": 128,
+          "ix": 64,
+          "pal": 6,
+          "c1": 128,
+          "c2": 128,
+          "c3": 16,
+          "sel": true,
+          "rev": false,
+          "mi": false,
+          "rY": false,
+          "mY": false,
+          "tp": false,
+          "o1": false,
+          "o2": false,
+          "o3": false,
+          "si": 0,
+          "m12": 1
+        }
+      ],
+      "ledmap": 1,
+      "n": "Swirl 🎨▦♪"
+    },
+    "100": {
+      "win": "PL=r&P1=1&P2=23",
+      "n": "Random",
+      "ql": "R"
+    }
+  }
