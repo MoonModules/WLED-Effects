@@ -209,10 +209,10 @@
         {
           "type": 2,
           "pin": [
-            0
+            17
           ],
           "macros": [
-            0,
+            100,
             0,
             0
           ]
@@ -255,7 +255,7 @@
       "mqtt": false
     },
     "ir": {
-      "pin": -1,
+      "pin": 0,
       "type": 0,
       "sel": true
     },
@@ -387,7 +387,22 @@
       ],
       "macro": 0
     },
-    "ins": []
+    "ins": [
+      {
+        "en": 1,
+        "hour": 255,
+        "min": 0,
+        "macro": 0,
+        "dow": 127
+      },
+      {
+        "en": 1,
+        "hour": 255,
+        "min": 0,
+        "macro": 0,
+        "dow": 127
+      }
+    ]
   },
   "ota": {
     "lock": false,
